@@ -32,6 +32,7 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Enumeration;
 import java.util.UUID;
@@ -122,6 +123,7 @@ public class FileResolver {
         if (enableCaching && cacheFile.exists()) {
           return cacheFile;
         }
+        fileName = Paths.get(fileName).normalize().toString();
         // Look for file on classpath
         ClassLoader cl = getClassLoader();
         if (NON_UNIX_FILE_SEP) {

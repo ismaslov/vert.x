@@ -23,7 +23,7 @@
   </parent>
 
   <artifactId>vertx-core</artifactId>
-  <version>3.5.0</version>
+  <version>3.5.0.imaslov1</version>
 
   <name>Vert.x Core</name>
 
@@ -39,12 +39,6 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
-  <scm>
-    <connection>scm:git:git@github.com:eclipse/vert.x.git</connection>
-    <developerConnection>scm:git:git@github.com:eclipse/vert.x.git</developerConnection>
-    <url>git@github.com:eclipse/vert.x.git</url>
-  </scm>
 
   <properties>
     <tcnative.version>2.0.6.Final</tcnative.version>
@@ -73,6 +67,13 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>bintray-ismaslov-vertx</id>
+      <url>https://api.bintray.com/maven/ismaslov/vertx/vertx-core/;publish=1</url>
+    </repository>
+  </distributionManagement>
 
   <dependencies>
 
